@@ -13,7 +13,7 @@ class TabLink {
     // console.log(this.itemElement);
     
     // Using the Item element, create a new instance of the TabItem class
-    this.tabItem= new TabItem(this.tabItem);
+    this.tabItem= new TabItem(this.itemElement);
     // console.log(this.tabItem);
     
     // Add a click event listener on this instance, calling the select method on click
@@ -44,6 +44,7 @@ class TabItem {
   constructor(element) {
     // Assign this.element to the passed in element
     this.element = element;
+    console.log(this.element);
   }
 
   select() {
@@ -55,8 +56,8 @@ class TabItem {
     items.forEach(item =>  item.classList.remove('tabs-item-selected'));
     
     // Add a class named "tabs-item-selected" to this element
-    this.element.classList.add('tabs-item-selected')
-    console.log(this.element);
+    this.element.classList.add('tabs-item-selected');
+    // console.log(this.element);
   }
 }
 
